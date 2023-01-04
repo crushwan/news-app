@@ -17,7 +17,7 @@ const fetchNews = async (
       access_key: $access_key
       categories: $categories
       keywords: $keywords
-      countries: "uk"
+      countries: "my"
       sort: "published_desc"
     ) {
       data {
@@ -46,7 +46,7 @@ const fetchNews = async (
   const res = await fetch('https://zhaobaoshan.stepzen.net/api/hazy-seagull/__graphql', {
     method: "POST",
     cache: isDynamic ? "no-cache" : "default",
-    next: isDynamic ? { revalidate: 0 } : { revalidate: 8640 },
+    next: isDynamic ? { revalidate: 0 } : { revalidate: 86400000000 },
     headers: {
       "Content-Type": "application/json",
       Authorization: `Apikey ${process.env.STEPZEN_API_KEY}`,
