@@ -1,4 +1,3 @@
-import next from "next";
 import { notFound } from "next/navigation";
 import LiveTimestamp from "../LiveTimestamp";
 
